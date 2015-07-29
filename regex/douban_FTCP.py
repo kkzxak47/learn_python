@@ -1,4 +1,9 @@
 # coding: utf-8
+"""
+http://www.douban.com/group/topic/78073359/
+提取指定Tid的文本段
+"""
+
 import re
 
 string = """[FTCP XXX XXXXXX] 
