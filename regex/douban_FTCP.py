@@ -9,9 +9,19 @@ XXXXXXXXXX
 ###XXXXXXXXXX### 
 .... 
 XXXXXXXXXX 
+} 
+
+[FTCP XXX XXXXXX] 
+
+Pacakage Tid=[00000002] XXXXXXXXXXXXXXXXX 
+{ 
+XXXXXXXXXX 
+###XXXXXXXXXX### 
+.... 
+XXXXXXXXXX 
 } """
 
 ptn = re.compile(r"(\[FTCP[^\]]+\]\s+)(Pacakage[^}]+})")
-match = ptn.match(string)
+match = ptn.findall(string)
 
-print match.groups()[1] if match else None
+print [t[1] for t in match] if match else None
