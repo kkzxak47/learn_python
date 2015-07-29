@@ -25,4 +25,4 @@ tid = "00000002"
 ptn = re.compile(r"(\[FTCP[^\]]+\]\s+)(Pacakage\s+Tid=\[" + tid + "\][^}]+})")
 match = ptn.findall(string)
 
-print [t[1] for t in match] if match else None
+print [t[1] for t in match]
