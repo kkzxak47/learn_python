@@ -3,7 +3,7 @@ import re
 
 string = """[FTCP XXX XXXXXX] 
 
-Pacakage Tid=[00000002] XXXXXXXXXXXXXXXXX 
+Pacakage Tid=[00000001] XXXXXXXXXXXXXXXXX 
 { 
 XXXXXXXXXX 
 ###XXXXXXXXXX### 
@@ -21,7 +21,8 @@ XXXXXXXXXX
 XXXXXXXXXX 
 } """
 
-ptn = re.compile(r"(\[FTCP[^\]]+\]\s+)(Pacakage[^}]+})")
+tid = "00000002"
+ptn = re.compile(r"(\[FTCP[^\]]+\]\s+)(Pacakage\s+Tid=\[" + tid + "\][^}]+})")
 match = ptn.findall(string)
 
 print [t[1] for t in match] if match else None
