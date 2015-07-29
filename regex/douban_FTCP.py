@@ -27,7 +27,7 @@ XXXXXXXXXX
 } """
 
 tid = "{0:08}".format(2)
-ptn = re.compile(r"(?<=\[FTCP\s\w{3}\s\w{6}\]\s\s\s)Pacakage\sTid=\[" + tid + "\][^}]+?}")
+ptn = re.compile(r"(?<=\[FTCP\s\w{3}\s\w{6}\]\s\s\s)Pacakage\sTid=\[" + tid + "\][^}]+}")
 match = ptn.findall(string)
 
 print match
