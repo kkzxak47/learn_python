@@ -27,7 +27,7 @@ XXXXXXXXXX
 } """
 
 tid = "00000002"
-ptn = re.compile(r"(\[FTCP[^\]]+\]\s+)(Pacakage\s+Tid=\[" + tid + "\][^}]+})")
+ptn = re.compile(r"(?<=\[FTCP\s\w{3}\s\w{6}\]\s\s\s)(Pacakage\s+Tid=\[" + tid + "\][^}]+})")
 match = ptn.findall(string)
 
-print [t[1] for t in match]
+print match
