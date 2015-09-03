@@ -136,8 +136,8 @@ class Problem4(object):
 
     def permutation(self):
         from itertools import permutations
-        all_possible_perms = [int(''.join(map(str, x)))
-                              for x in permutations(self.num_list)]
+        all_possible_perms = (int(''.join(map(str, x)))
+                              for x in permutations(self.num_list))
         return max(all_possible_perms)
 
     def test(self):
@@ -184,12 +184,13 @@ def main():
     # p3.test()
     # p4 = Problem4([501, 50, 2, 1, 9])
     # p4 = Problem4([56, 565655, 56565665])
-    # p4 = Problem4([9, 95, 959, 9585, 9595])
+    p4 = Problem4([9, 95, 959, 9585, 9595])
     # p4 = Problem4([4, 56, 5])
-    p4 = Problem4([4, 50, 5])
-    # p4.test()
-    p5 = Problem5('123456789', 100)
-    p5.test()
+    # p4 = Problem4([4, 50, 5])
+    # p4 = Problem4([50, 2, 1, 9])
+    p4.test()
+    # p5 = Problem5('123456789', 100)
+    # p5.test()
     return 0
 
 
