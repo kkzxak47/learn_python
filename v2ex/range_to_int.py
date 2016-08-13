@@ -1,5 +1,8 @@
 #/usr/bin/env python3
 # coding: utf-8
+"""https://v2ex.com/t/298833
+"""
+
 
 import bisect
 
