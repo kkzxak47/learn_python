@@ -3,8 +3,8 @@
 """https://v2ex.com/t/298833
 """
 
-
 import bisect
+
 
 def main():
     arr = [1, 2, 3, 4]
